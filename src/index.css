@@ -9,7 +9,7 @@
   --purple-500: #7c5dfa;
   --purple-200: #9277ff;
   --gray-600: #1e2139;
-  --gray-400: #252945;
+  --gray-400: #c1c1c1;
   --gray-100: #dfe3fa;
   --gray-200: #888eb0;
   --gray-300: #7e88c3;
@@ -18,17 +18,25 @@
   --red-100: #9277ff;
   --BG-999: #f8f8f8;
   --background: #ffffff;
+  --background: #ffffff;
   --btn: #b26eff;
+  --gg: #ffffff;
+  --text:#1f1f1f;
 }
 
 .dark {
-  --gray-600: #1e2139;
-  --gray-400: #252945;
+  --gray-300: #8e9094;
+  --gray-600: #363b54;
+  --gray-400: #6b6c74;
   --background: #141625;
   --btn: #1d4eff;
+  --BG-999: #10101e;
+  --black-900: #f6f6f6;
+  --gg: #151421;
+  --text:#ececec;
 }
 
 body {
   background-color: var(--background);
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
 }

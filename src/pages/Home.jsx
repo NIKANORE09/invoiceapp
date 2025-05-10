@@ -1,21 +1,23 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Invoices from "../components/Invoices";
-import "./Home.css";
 
-function Home({ invoices }) {
-  const ChangeTheme = () => {
+function Home({ invoices, showSidebar, setShowSidebar }) {
+  const [filteredInvoices, setFilteredInvoices] = useState(invoices);
+
+  const changeTheme = () => {
     document.documentElement.classList.toggle("dark");
   };
+
   return (
-    <div className="bg-[var(--BG-999)]">
-      <Header />
+    <div className="bg-[var(--BG-999, --background)] ">
+      <Header
+        invoices={invoices}
+        setFilteredInvoices={setFilteredInvoices}
+        setShowSidebar={setShowSidebar}
+      />
 
-      <Invoices invoices={invoices} />
-
-      {/* <button className="px-4 py-2 bg-[var(--btn)]" onClick={ChangeTheme}>
-        dark/light
-      </button> */}
+      <Invoices invoices={filteredInvoices} />
     </div>
   );
 }
