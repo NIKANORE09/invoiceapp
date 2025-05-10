@@ -12,7 +12,7 @@ export default function Invoices({ invoices }) {
           <Link
             to={`/${el.id}`}
             key={el.id}
-            className="grid grid-cols-[100px_140px_1fr_100px_100px] items-center text-[var(--gray-400)] bg-[var(--background)] rounded-xl px-[28px] py-[20px] font-bold shadow-md"
+            className="grid grid-cols-[100px_140px_1fr_100px_100px] items-center text-[var(--gray-400)] bg-[var(--gray-600)] rounded-xl px-[28px] py-[20px] font-bold shadow-md"
           >
             <div className="inline-flex">
               <h2 className="text-[var(--gray-300)]">#</h2>
@@ -22,7 +22,7 @@ export default function Invoices({ invoices }) {
               {transportfromDate(el.paymentDue)}
             </h2>
             <h2 className="text-[var(--gray-300)]">{el.clientName}</h2>
-            <h2 className="text-[var(--black-900)]">£{el.total}.00</h2>
+            <h2 className="text-[var(--gray-300)]">£{el.total}.00</h2>
             <StatusBadge status={el.status} />
           </Link>
         ))}
